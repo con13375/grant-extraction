@@ -1,0 +1,21 @@
+[project]
+name = "grant-extraction"
+version = "0.1.0"
+description = "Extraction and evaluation of requirements from Spanish public grants"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "pypdf>=4.0",
+    "typer>=0.9",
+    "rich>=13.0",
+]
+
+[project.scripts]
+grant-extract = "grant_extract.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
