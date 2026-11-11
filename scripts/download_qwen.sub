@@ -1,0 +1,16 @@
+## download_qwen.sub
+universe = vanilla
+
+executable = download_qwen.sh
+log        = download_qwen.log
+output     = download_qwen.out
+error      = download_qwen.err
+
+request_gpus = 1
+request_memory = 4000
+# Custom attribute to request Nvidia A100 GPU nodes (site-specific)
++UseNvidiaA100      = True
+
+accounting_group = ific039
+
+queue 1
