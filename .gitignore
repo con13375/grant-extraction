@@ -4,3 +4,9 @@ __pycache__/
 data/raw/
 data/interim/
 *.egg-info/
+data/processed/
+
+# HTCondor run artifacts
+scripts/*.log
+scripts/*.out
+scripts/*.err

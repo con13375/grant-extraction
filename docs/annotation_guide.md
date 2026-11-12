@@ -70,11 +70,11 @@ Conditional rules ("si X, entonces Y"):
 | Field | Rule |
 |---|---|
 | `requirement_id` | `T1-<n>-<short>` where `<n>` is the document's page number where the requirement appears, and `<short>` is a slug like `deadline`, `income_cap`, `docs_submit`. Must be unique per document. |
-| `type` | `boolean` (yes/no), `numeric` (a number with a comparator), `date` (a date), `membership` (an element of a defined set). |
+| `type` | `boolean` (yes/no), `numeric` (a number with a comparator), `date` (a date), `membership` (an element of a defined set), document (a document that must be submitted).|
 | `subject` | Lowercase, snake_case, stable across documents. Examples: `applicant_age`, `applicant_residence`, `application_deadline`, `max_grant_amount`, `eligible_expenditure`. **Invent subjects deliberately** — if you invent a new one, list it in §7 below. |
-| `comparator` | One of: `>=`, `<=`, `==`, `!=`, `in`, `not_in`, `between`, `before`, `after`. `null` for `boolean` and `membership` unless meaningful. |
+| `comparator` | One of: `>=`, `<=`, `==`, `!=`, `in`, `not_in`, `between`, `before`, `after`. `null` for `boolean`, `document` and `membership` unless meaningful. |
 | `value` | The comparison value. Use the document's own units (euros, years, days). For dates, ISO `YYYY-MM-DD`. For membership, a list. Never write "N/A" — use `null`. |
-| `applicability` | Free-text condition, e.g. `"if applicant is a legal entity"`. `null` if unconditional. |
+| `applicability` | Free-text condition, e.g. `"if applicant is a legal entity"`. `null` if unconditional. — set only when the document explicitly states a condition on who the rule applies to. If the rule applies to all applicants, it's null. Do not infer conditions from context |
 | `jurisdiction` | The issuing jurisdiction's ISO 3166-2 code, e.g. `ES` for state, `ES-VC` for Comunitat Valenciana, `ES-M` for Madrid. |
 | `effective_from` | Earliest date the rule applies. `null` if not stated (see §5). |
 | `effective_to` | Latest date the rule applies, for deadlines. `null` if no deadline stated. |
@@ -116,7 +116,7 @@ Rules for choosing the span:
 - **Deadline stated relative to publication** ("20 días hábiles desde la
   publicación"): set `effective_to: null`, put the relative rule in `value`
   and `notes`. Do not compute a date unless the publication date is also
-  in the document.
+  in the document. **Ejemplo**: resolución firmada el 28/10/2026, publicada el 10/11/2026. Plazo: "10 días hábiles desde la entrada en vigor". La entrada en vigor no se especifica en el texto, sin comparator y el texto como tal en value a pesar de ser de tipo numérico; asumimos publicación (10/11/2026) como referencia, pero el cómputo exacto queda como unknown.
 - **Open-ended** ("hasta agotar presupuesto"): `effective_to: null`,
   `notes: "until budget exhausted"`.
 - **Amendments:** if an amendment changes the deadline, record **both**:
@@ -135,6 +135,7 @@ In each document's gold file, include **at least one**:
 - **Negative example:** a piece of text that *looks* like a requirement but
   isn't. Encode it with `status: "unknown"` and `notes: "NEGATIVE: not a
   requirement because ..."`. This tests whether the model over-extracts.
+    - Included a negative example for a requirement making reference to another unavailable document.
 - **Ambiguous case:** a rule that could reasonably be read two ways. Pick
   one reading, record why in `notes`, and note the alternative. This tests
   whether the model hallucinates a confident answer where the document is
@@ -166,7 +167,7 @@ stable — a model evaluated on `applicant_age` should never encounter
 
 ### Types
 
-`boolean`, `numeric`, `date`, `membership`.
+`boolean`, `numeric`, `date`, `membership`, `document`.
 
 ---
 

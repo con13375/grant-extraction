@@ -14,10 +14,10 @@ class Evidence(BaseModel):
 class Requirement(BaseModel):
     """A single requirement extracted from a grant document."""
     requirement_id: str
-    type: Literal["boolean", "numeric", "date", "membership"]
+    type: Literal["boolean", "numeric", "date", "membership", "document"]
     subject: str
     comparator: Optional[str] = None
-    value: Optional[Union[str, int, float, date]] = None
+    value: Optional[Union[str, int, float, date, list[str]]] = None
     applicability: Optional[str] = None
     jurisdiction: str
     effective_from: Optional[date] = None

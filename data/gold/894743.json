@@ -1,0 +1,59 @@
+[
+  {
+    "requirement_id": "T1-1-deadline",
+    "type": "date",
+    "subject": "application_deadline",
+    "comparator": "before",
+    "value": "2026-05-19",
+    "applicability": null,
+    "jurisdiction": "ES",
+    "effective_from": null,
+    "effective_to": "2026-05-19",
+    "evidence": {
+      "document_id": "894743",
+      "section": "page 1",
+      "span_start": 1234,
+      "span_end": 1290
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-age",
+    "type": "numeric",
+    "subject": "applicant_age",
+    "comparator": ">=",
+    "value": 18,
+    "applicability": null,
+    "jurisdiction": "ES",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "894743",
+      "section": "page 3",
+      "span_start": 4501,
+      "span_end": 4560
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-income-cap",
+    "type": "numeric",
+    "subject": "applicant_income",
+    "comparator": "<=",
+    "value": 35000,
+    "applicability": "if applicant is independent from family unit",
+    "jurisdiction": "ES",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "894743",
+      "section": "page 4",
+      "span_start": 6120,
+      "span_end": 6250
+    },
+    "exceptions": ["if applicant has dependants, threshold is raised"],
+    "status": "unknown"
+  }
+]

@@ -11,6 +11,6 @@ request_memory = 4000
 # Custom attribute to request Nvidia A100 GPU nodes (site-specific)
 +UseNvidiaA100      = True
 
-accounting_group = ific039
+#accounting_group = ific039
 
 queue 1

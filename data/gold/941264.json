@@ -1,0 +1,222 @@
+[
+  {
+    "requirement_id": "T1-3-deadline",
+    "type": "numeric",
+    "subject": "application_deadline",
+    "comparator": null,
+    "value": "10 días hábiles a partir de la entrada en vigor de esta resolución",
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 10415,
+      "span_end": 10564
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-2-docs-salary",
+    "type": "document",
+    "subject": "required_documents",
+    "comparator": null,
+    "value": "Certificado del interventor de la corporación referente a los salarios brutos devengados por el personal docente de los centros en el periodo subvencionable",
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+   "evidence": {
+        "document_id": "941264",
+        "section": "page 2",
+        "span_start": 9059,
+        "span_end": 9217
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+    {
+    "requirement_id": "T1-3-docs-tablas",
+    "type": "document",
+    "subject": "required_documents",
+    "comparator": null,
+    "value": "Tablas mensuales y tabla anual que aparecen en el anexo I y II de la presente resolución y que se podrá descargar en: https://ceice.gva.es/es/web/ensenanzas-regimen-especial/cac/base-reguladora-convocatoria-any-actual-pla-control",
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+   "evidence": {
+        "document_id": "941264",
+        "section": "page 3",
+        "span_start": 9798,
+        "span_end": 10027
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+    {
+    "requirement_id": "NEG-3-reintegro-art37",
+    "type": "boolean",
+    "subject": "reintegro",
+    "comparator": null,
+    "value": "En los casos previstos en el artículo 37 de la Ley general de subvenciones, la entidad beneficiaria deberá reintegrar la totalidad o una parte de la cantidad percibida más los correspondientes intereses de demora.",
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 12803,
+      "span_end": 13016
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-payment-tax-ss",
+    "type": "boolean",
+    "subject": "payment_precondition_tax_social_security",
+    "comparator": null,
+    "value": true,
+    "applicability": "precondition for payment of the subsidy",
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 11597,
+      "span_end": 11727
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-payment-accounts",
+    "type": "boolean",
+    "subject": "payment_precondition_accounts_filed",
+    "comparator": null,
+    "value": true,
+    "applicability": "precondition for payment of the subsidy",
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 11729,
+      "span_end": 11860
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-payment-not-debtor",
+    "type": "boolean",
+    "subject": "payment_precondition_not_debtor",
+    "comparator": null,
+    "value": true,
+    "applicability": "precondition for payment of the subsidy",
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 11864,
+      "span_end": 11950
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-aid-cap",
+    "type": "numeric",
+    "subject": "total_aid_cap",
+    "comparator": "<=",
+    "value": "cost of the subsidised activity",
+    "applicability": "cumulative: sum of this subsidy plus any other subsidies, aid, income or resources for the same purpose, from any public or private entity, national, EU or international",
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 13849,
+      "span_end": 14165
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-electronic-relation",
+    "type": "boolean",
+    "subject": "electronic_relation_obligation",
+    "comparator": null,
+    "value": true,
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 10852,
+      "span_end": 11018
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-3-applicant-type",
+    "type": "membership",
+    "subject": "applicant_type",
+    "comparator": "in",
+    "value": ["persona_juridica", "administracion_publica"],
+    "applicability": null,
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 3",
+      "span_start": 10852,
+      "span_end": 10946
+    },
+    "exceptions": [],
+    "status": "unknown"
+  },
+  {
+    "requirement_id": "T1-2-expenditure-exclude-payroll-concepts",
+    "type": "membership",
+    "subject": "eligible_expenditure",
+    "comparator": "not_in",
+    "value": [
+      "locomoción",
+      "dietas",
+      "aportaciones a planes de pensiones",
+      "ayudas médico-sanitarias",
+      "ayuda sanitaria",
+      "productividad",
+      "productividad por objetivos",
+      "ayuda estudios",
+      "beneficios sociales",
+      "otros conceptos de carácter compensatorio"
+    ],
+    "applicability": "for personal docente",
+    "jurisdiction": "ES-VC",
+    "effective_from": null,
+    "effective_to": null,
+    "evidence": {
+      "document_id": "941264",
+      "section": "page 2",
+      "span_start": 8390,
+      "span_end": 8750
+    },
+    "exceptions": [],
+    "status": "unknown"
+  }
+]
